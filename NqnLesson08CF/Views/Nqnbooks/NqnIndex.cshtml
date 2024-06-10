@@ -1,0 +1,57 @@
+﻿@model IEnumerable<NqnLesson08CF.Models.Nqnbook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NqnTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NqnAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NqnYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NqnPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NqnCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NqnTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NqnAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NqnYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NqnPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NqnCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NqnbookId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NqnbookId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NqnbookId })
+        </td>
+    </tr>
+}
+
+</table>

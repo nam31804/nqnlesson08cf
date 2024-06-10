@@ -1,0 +1,58 @@
+﻿@model NqnLesson08CF.Models.Nqnbook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nqnbook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NqnTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NqnTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NqnAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NqnAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NqnYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NqnYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NqnPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NqnPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NqnCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NqnCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NqnbookId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
